@@ -10,9 +10,11 @@ const Cart = ({cart}) => {
     //    if(product.quantity===0){
     //     product.quantity =1
     //    }
-       quantity= quantity + product.quantity
-       toatlPrice = toatlPrice + product.price * product.quantity
-       toatlTax = toatlPrice/100 *7
+      if(product){
+        quantity= quantity + product.quantity;
+        toatlPrice = toatlPrice + product.price * product.quantity;
+        toatlTax = toatlPrice/100 *7;
+      }
 
     }
     return (
